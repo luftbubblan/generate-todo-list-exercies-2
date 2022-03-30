@@ -33,12 +33,12 @@ const TodoApp = () => {
     ];
 
     const handleClick = (e) => {
-        e.target.classList.add("done");
+        e.target.classList.toggle("done");
     }
 
     return (
         <ul>
-            {todos.map((listItem) =>  <ListItem key={listItem.id} task={listItem.task} handleClick={handleClick} number={listItem.id} />)}
+            {todos.map((listItem, index) =>  <ListItem key={listItem.id} task={listItem.task} handleClick={handleClick} index={index} />)}
         </ul>
     )
 }

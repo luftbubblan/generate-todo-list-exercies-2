@@ -1,8 +1,8 @@
-const ListItem = ({task, handleClick, number}) => {
+const ListItem = ({task, handleClick, index}) => {
     return(
-        number % 2
-            ?<li className="odd" onClick={handleClick}>{task}</li>
-            :<li onClick={handleClick}>{task}</li>
+        index % 2
+            ?<li onClick={handleClick}>{task}</li>
+            :<li className="odd" onClick={handleClick}>{task}</li>
     )
 }
 
